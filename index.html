@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latch Theory — Preview Both Designs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: #1C1A17;
+      color: #F5F0EB;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+    }
+    .label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .sub {
+      font-size: 0.9rem;
+      color: rgba(245,240,235,0.5);
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .designs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      width: 100%;
+      max-width: 900px;
+    }
+    .design-card {
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #2E2C29;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+      display: block;
+    }
+    .design-card:hover { border-color: #C9A84C; transform: translateY(-4px); }
+    .card-thumb {
+      height: 220px;
+      overflow: hidden;
+    }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .design-card:hover .card-thumb img { transform: scale(1.04); }
+    .card-thumb.light { background: #F5F0EB; display: flex; align-items: center; justify-content: center; }
+    .card-thumb.dark  { background: #1C1A17; display: flex; align-items: center; justify-content: center; }
+    .thumb-demo-light {
+      width: 100%; height: 100%;
+      background: #F5F0EB;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;
+    }
+    .thumb-demo-dark {
+      width: 100%; height: 100%;
+      background: #1C1A17;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;
+    }
+    .demo-bar-light { width: 60%; height: 2px; background: #C9A84C; }
+    .demo-bar-dark  { width: 60%; height: 2px; background: #C9A84C; }
+    .demo-text-light { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #1C1A17; letter-spacing: 0.05em; }
+    .demo-text-dark  { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #F5F0EB; letter-spacing: 0.05em; }
+    .demo-sub-light { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A84C; }
+    .demo-sub-dark  { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A84C; }
+    .card-info {
+      padding: 1.5rem;
+      border-top: 1px solid #2E2C29;
+    }
+    .card-num {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: #C9A84C;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 0.4rem;
+    }
+    .card-desc {
+      font-size: 0.78rem;
+      color: rgba(245,240,235,0.5);
+      line-height: 1.6;
+    }
+    .arrow {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #C9A84C;
+    }
+    @media (max-width: 600px) {
+      .designs { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <p class="label">Client Preview</p>
+  <h1>Latch Theory</h1>
+  <p class="sub">Choose the design you'd like to keep. Both use the same brand, content, and colors.</p>
+
+  <div class="designs">
+    <a href="design1/index.html" class="design-card">
+      <div class="card-thumb light">
+        <div class="thumb-demo-light">
+          <span class="demo-sub-light">Latch Theory</span>
+          <div class="demo-bar-light"></div>
+          <span class="demo-text-light">Light &amp; Elegant</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <p class="card-num">Design 01</p>
+        <p class="card-title">Light &amp; Elegant</p>
+        <p class="card-desc">Cream background, open whitespace, understated luxury. Classic and timeless.</p>
+        <span class="arrow">View Design →</span>
+      </div>
+    </a>
+
+    <a href="design2/index.html" class="design-card">
+      <div class="card-thumb dark">
+        <div class="thumb-demo-dark">
+          <span class="demo-sub-dark">Latch Theory</span>
+          <div class="demo-bar-dark"></div>
+          <span class="demo-text-dark">Dark &amp; Editorial</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <p class="card-num">Design 02</p>
+        <p class="card-title">Dark &amp; Editorial</p>
+        <p class="card-desc">Charcoal background, gold accents, bold photography. High-end and dramatic.</p>
+        <span class="arrow">View Design →</span>
+      </div>
+    </a>
+  </div>
+</body>
+</html>
