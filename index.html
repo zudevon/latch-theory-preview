@@ -42,7 +42,7 @@
     }
     .designs {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
       width: 100%;
       max-width: 900px;
@@ -110,6 +110,7 @@
       text-transform: uppercase;
       color: #C9A84C;
     }
+    .featured-card { border-color: #C9A84C40; }
     @media (max-width: 600px) {
       .designs { grid-template-columns: 1fr; }
     }
@@ -149,6 +150,22 @@
         <p class="card-num">Design 02</p>
         <p class="card-title">Dark &amp; Editorial</p>
         <p class="card-desc">Charcoal background, gold accents, bold photography. High-end and dramatic.</p>
+        <span class="arrow">View Design →</span>
+      </div>
+    </a>
+
+    <a href="design3/index.html" class="design-card featured-card">
+      <div class="card-thumb light">
+        <div class="thumb-demo-light">
+          <span class="demo-sub-light" style="color:#C9A84C">★ Client Revision</span>
+          <div class="demo-bar-light"></div>
+          <span class="demo-text-light">Full Site Build</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <p class="card-num" style="color:#C9A84C">Design 03 — Revised</p>
+        <p class="card-title">Full Site Build</p>
+        <p class="card-desc">Light design + scrolling bar, logo, collection tiers, events with pricing, Moments gallery, contact form, socials, FAQs &amp; policies.</p>
         <span class="arrow">View Design →</span>
       </div>
     </a>

@@ -1,0 +1,80 @@
+.policy-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10rem 2rem 6rem;
+}
+
+.policy-header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+
+.policy-header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.policy-date {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.policy-content { margin-bottom: 3rem; }
+
+/* FAQ styles */
+.faq-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.faq-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--charcoal);
+}
+.faq-item p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.faq-item a { color: var(--gold); }
+.faq-item a:hover { color: var(--gold-dark); }
+
+/* Prose styles (for policy pages) */
+.prose h2 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--charcoal);
+}
+.prose p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.prose ul {
+  list-style: none;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
+}
+.prose ul li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+.prose ul li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+.prose a { color: var(--gold); }
+.prose a:hover { color: var(--gold-dark); }
+.prose strong { color: var(--charcoal); font-weight: 500; }
+
+.policy-back { margin-top: 3rem; }
