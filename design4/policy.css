@@ -1,0 +1,38 @@
+.policy-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 9rem 2rem 6rem;
+}
+.policy-header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+.policy-header h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem; }
+.policy-date { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; }
+
+.policy-content { margin-bottom: 3rem; }
+
+/* FAQs */
+.faq-item { padding: 2rem 0; border-bottom: 1px solid var(--border); }
+.faq-item h3 { font-size: 1.2rem; margin-bottom: 0.75rem; }
+.faq-item p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; }
+
+/* Prose */
+.prose h2 { font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+.prose p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 1rem; }
+.prose ul { list-style: none; margin: 0.5rem 0 1.25rem; padding: 0; }
+.prose ul li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+.prose ul li::before { content: '✦'; position: absolute; left: 0; font-size: 0.55rem; color: var(--gold); top: 0.35rem; }
+.prose a { color: var(--gold); }
+.prose a:hover { color: var(--gold-dark); }
+.prose strong { color: var(--charcoal); font-weight: 500; }
+
+.policy-back { margin-top: 3rem; }

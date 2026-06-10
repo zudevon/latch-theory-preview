@@ -42,7 +42,7 @@
     }
     .designs {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
       width: 100%;
       max-width: 900px;
@@ -111,7 +111,10 @@
       color: #C9A84C;
     }
     .featured-card { border-color: #C9A84C40; }
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
+      .designs { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 500px) {
       .designs { grid-template-columns: 1fr; }
     }
   </style>
@@ -119,7 +122,7 @@
 <body>
   <p class="label">Client Preview</p>
   <h1>Latch Theory</h1>
-  <p class="sub">Choose the design you'd like to keep. Both use the same brand, content, and colors.</p>
+  <p class="sub">Review all four designs below. Design 04 is the full build with all your content.</p>
 
   <div class="designs">
     <a href="design1/index.html" class="design-card">
@@ -169,6 +172,22 @@
         <span class="arrow">View Design →</span>
       </div>
     </a>
+    <a href="design4/index.html" class="design-card featured-card">
+      <div class="card-thumb light">
+        <div class="thumb-demo-light">
+          <span class="demo-sub-light" style="color:#C9A84C">★ Final Build</span>
+          <div class="demo-bar-light"></div>
+          <span class="demo-text-light">Full Content</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <p class="card-num" style="color:#C9A84C">Design 04 — Final</p>
+        <p class="card-title">Full Content Build</p>
+        <p class="card-desc">Logo splash entrance, real pricing, all 10 reviews, 5 events, 4 tiers, contact form, socials, FAQs &amp; policies — all from your PDFs.</p>
+        <span class="arrow">View Design →</span>
+      </div>
+    </a>
+
   </div>
 </body>
 </html>
