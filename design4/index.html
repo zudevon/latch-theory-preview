@@ -9,10 +9,10 @@
 </head>
 <body>
 
-  <!-- ── Nav (hidden until scroll past splash) ── -->
-  <nav id="nav">
+  <!-- ── Nav ── -->
+  <nav id="nav" class="nav-visible">
     <div class="nav-inner">
-      <a href="#splash" class="nav-logo">
+      <a href="#hero" class="nav-logo">
         <img src="../images/logo.PNG" alt="Latch Theory" />
       </a>
       <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
@@ -25,18 +25,6 @@
     </div>
   </nav>
 
-  <!-- ── Splash ── -->
-  <section class="splash" id="splash">
-    <div class="splash-content">
-      <img src="../images/logo.PNG" alt="Latch Theory" class="splash-logo" />
-      <p class="splash-tagline">Permanent Jewelry &nbsp;·&nbsp; Texas</p>
-    </div>
-    <a href="#hero" class="splash-scroll" aria-label="Scroll down">
-      <span>Enter</span>
-      <div class="scroll-line"></div>
-    </a>
-  </section>
-
   <!-- ── Hero ── -->
   <section class="hero" id="hero">
     <div class="hero-content">
@@ -45,8 +33,8 @@
       <p class="hero-sub">No clasps. No adjustments. No losing it. Custom fit to your body — welded on-the-spot and worn forever.</p>
       <a href="#contact" class="btn-primary">Book an Appointment</a>
     </div>
-    <div class="hero-image">
-      <img src="../images/bracelet-gold-arm.jpg" alt="Gold bracelet on wrist" />
+    <div class="hero-logo-block">
+      <img src="../images/logo.PNG" alt="Latch Theory" class="hero-logo-img" />
     </div>
   </section>
 
@@ -285,18 +273,6 @@
       <h2>Memories Worn Forever</h2>
     </div>
 
-    <div class="moments-photos">
-      <div class="moment-photo">
-        <img src="../images/customer-image-1.jpeg" alt="Customer moment" />
-      </div>
-      <div class="moment-photo">
-        <img src="../images/customer-image-2.jpeg" alt="Customer moment" />
-      </div>
-      <div class="moment-photo">
-        <img src="../images/bracelet-evil-eye.jpg" alt="Jewelry moment" />
-      </div>
-    </div>
-
     <div class="reviews-grid">
 
       <div class="review-card">
@@ -457,14 +433,10 @@
   </footer>
 
   <script>
-    // Show nav after scrolling past splash
-    const nav = document.getElementById('nav');
-    const splash = document.getElementById('splash');
-    function checkScroll() {
-      nav.classList.toggle('nav-visible', splash.getBoundingClientRect().bottom <= 0);
-    }
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    checkScroll();
+    // Shrink nav border on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
 
     // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
